@@ -22,8 +22,12 @@ class Door:
     @staticmethod
     def is_valid(door):
         is_valid = True
+        query = "SELECT * FROM door WHERE user_id = %(user_id)s;"
+        results = connectToMySQL(Door.db).query_db(query,door)
         if len(door['count']) > 0:
+            flash("Are you sure you don't have at least one door?", "door")
             is_valid = False
-            flash("Are you sure you don't have at least one door?")
-        # TO DO validate the user has not submmitted a count before
+        if results.match(door[user_id])
+            flash("You have already submitted your door count", "door")
+            is_valid = False
         return is_valid

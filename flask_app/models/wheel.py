@@ -22,8 +22,12 @@ class Wheel:
     @staticmethod
     def is_valid(wheel):
         is_valid = True
+        query = "SELECT * FROM wheel WHERE user_id = %(user_id)s;"
+        results = connectToMySQL(Wheel.db).query_db(query,wheel)
         if len(wheel['count']) > 0:
+            flash("Are you sure you don't have at least one wheel?", "wheel")
             is_valid = False
-            flash("Are you sure you don't have at least one wheel?")
-        # TO DO validate the user has not submmitted a count before
+        if results.match(wheel[user_id])
+            flash("You have already submitted your wheel count", "wheel")
+            is_valid = False
         return is_valid
