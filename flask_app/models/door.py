@@ -1,6 +1,5 @@
-from ..config.mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash
-from flask_app.models import user
 
 # init the class
 class Door:
@@ -10,6 +9,7 @@ class Door:
         self.count = data['count']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        self.user_id = data["user_id"]
 
 # allows user to save door count to db
     @classmethod
@@ -18,15 +18,12 @@ class Door:
         return connectToMySQL(cls.db).query_db(query,data)
 
 # validates user input for door count
+# valid = at least 1 count, has not submitted before
     @staticmethod
     def is_valid(door):
         is_valid = True
-        query = "SELECT * FROM door WHERE " #HELP
-        count = connectToMySQL(Door.db).query_db(query,door)
-        # validates the user is submitting a door count of at least 1
         if len(door['count']) > 0:
             is_valid = False
             flash("Are you sure you don't have at least one door?")
+        # TO DO validate the user has not submmitted a count before
         return is_valid
-
-# TO DO validate the user has not submmitted a count before
