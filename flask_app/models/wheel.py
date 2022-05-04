@@ -27,7 +27,7 @@ class Wheel:
         if len(wheel['count']) > 0:
             flash("Are you sure you don't have at least one wheel?", "wheel")
             is_valid = False
-        if results.match(wheel[user_id])
+        if results.match(wheel['user_id']):
             flash("You have already submitted your wheel count", "wheel")
             is_valid = False
         return is_valid
