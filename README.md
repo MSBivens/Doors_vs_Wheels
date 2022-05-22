@@ -168,9 +168,9 @@ Project Link: [https://github.com/MSBivens/doors_vs_wheels](https://github.com/g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/MSBivens/doors_vs_wheels.svg?style=for-the-badge
+[contributors-url]: https://github.com/MSBivens/doors_vs_wheels/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/MSBivens/doors_vs_wheels.svg?style=for-the-badge
+[issues-url]: https://github.com/MSBivens/doors_vs_wheels/issues
+[license-shield]: https://img.shields.io/github/license/MSBivens/doors_vs_wheels.svg?style=for-the-badge
+[license-url]: https://github.com/MSBivens/doors_vs_wheels/blob/master/LICENSE.txt
